@@ -1,1 +1,2 @@
-PatientCard{patientId=1, patientName='fff', diagnosis='fff', doctorName='fff'}&
+PatientCard{patientId=0, patientName='Адам', patientDiagnosis='кашель', doctorName='Ангелина'}&
+PatientCard{patientId=1, patientName='Магомед', patientDiagnosis='си шарп', doctorName='Джава'}&

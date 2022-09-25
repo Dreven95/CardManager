@@ -1,33 +1,40 @@
 package com.dreven95.patientcardmanager;
 
-import java.util.Scanner;
 
 public class PatientCard {
 
     private int patientId;
     private String patientName;
-    private String diagnosis;
+    private String patientDiagnosis;
     private String doctorName;
 
-    Scanner keyboard = new Scanner(System.in);
     private static int counter = 0;
 
-    public void addPatientCard() {
-        System.out.println("Введите имя пациента: ");
-        this.patientName = keyboard.nextLine();
-        System.out.println("Введите диагноз пациента: ");
-        this.diagnosis = keyboard.nextLine();
-        System.out.println("Введите имя лечащего доктора: ");
-        this.doctorName = keyboard.nextLine();
+    public PatientCard(String patientName, String patientDiagnosis, String doctorName) {
+        this.patientName = patientName;
+        this.patientDiagnosis = patientDiagnosis;
+        this.doctorName = doctorName;
         this.patientId = counter++;
+    }
+
+    public void setPatientName(String patientName) {
+        this.patientName = patientName;
+    }
+
+    public void setPatientDiagnosis(String patientDiagnosis) {
+        this.patientDiagnosis = patientDiagnosis;
+    }
+
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
     }
 
     public String getPatientName() {
         return patientName;
     }
 
-    public String getDiagnosis() {
-        return diagnosis;
+    public String getPatientDiagnosis() {
+        return patientDiagnosis;
     }
 
     public String getDoctorName() {
@@ -43,7 +50,7 @@ public class PatientCard {
         return "PatientCard{" +
                 "patientId=" + patientId +
                 ", patientName='" + patientName + '\'' +
-                ", diagnosis='" + diagnosis + '\'' +
+                ", patientDiagnosis='" + patientDiagnosis + '\'' +
                 ", doctorName='" + doctorName + '\'' +
                 '}';
     }

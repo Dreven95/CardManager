@@ -1,1 +1,0 @@
-PatientCard{patientId=1, patientName='fff', diagnosis='fff', doctorName='fff'}&
